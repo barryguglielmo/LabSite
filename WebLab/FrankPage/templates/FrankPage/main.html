@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dr. Frank Sacks</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'FrankPage/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+ul#menu li {display:inline;
+}
+</style>
+<nav class="navbar navbar-inverse" role="navigation" >
+		<ul id = "menu">
+			<li><button class="btn btn-secondary active" href="#">Publications</button></li>
+			<li><button class="btn btn-secondary active" href="#">Blog</button></li>
+			<li class = "dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  			Lab Info
+  			</button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">PhD Students</a>
+    <a class="dropdown-item" href="#">Staff</a>
+    <a class="dropdown-item" href="#">Collaborators</a>
+</div>
+</div>
+		</ul>
+</nav>
+
+<body class="body" style="background-color:#D5DBDB">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div>
+			  <div class="col-sm-2">
+				  <br>
+				  <center>
+					<img src="{% static 'FrankPage/img/Dr_Frank_Sacks.jpg' %}" class="responsive-img" style='max-height:200px;' alt="face">
+				  </center>
+			  </div>
+			  <div class="col-sm-10">
+				  <br>
+				  <center>
+				  <h3 style = "width: 70%;color:white;background-color:#990000;">Professor of Cardiovascular Disease Prevention </h3>
+				  </center>
+			  </div>
+		</div><hr>
+		  <br><br>
+
+
+			<br><br>
+			   {% block content %}
+			   {% endblock %}
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<footer>
+		<center>
+		<div class="container-fluid" style='margin-left:8%;'>
+			<style>
+			a {color:white;}
+			</style>
+			<p style = "width:50%;background-color:gray;color:white;"><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
